@@ -1,9 +1,10 @@
 /*======================================
   class MergeSortTester
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  Base case is one card.  If greater than one caard split the array.
+  When handing back, put lowest card on top, select fromk the tops.  
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O(nlogn)
   Mean execution times for dataset of size n:
   Batch size: 10 times for 1-10000. Once for 1 million
   n=1       time: 0.0 ms
