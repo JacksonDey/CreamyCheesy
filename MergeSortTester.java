@@ -1,10 +1,13 @@
 /*======================================
   class MergeSortTester
   ALGORITHM:
-  Base case is one card.  If greater than one caard split the array.
-  When handing back, put lowest card on top, select fromk the tops.  
+  A list in random order is given to the initial method call.  Then, the list is broken up into two (almost) even smaller lists. Then these lists are broken yet again.  This continues until there are only single item lists. At this point, ordered lists are passed back up the chain of command and are merged in order. The lists are continuously passed up. This continues until the list has been united.
+ 
   BIG-OH CLASSIFICATION OF ALGORITHM:
   O(nlogn)
+  EXPLAINATION:
+The list once its broken down to its constituent parts is made up of exactly n small lists that are broken-up. Think about the merging in levels, where one level represents all lists of the previous level either being merged or split. To reassemble, you need to apple a merging function to each broken up list at a given level. As you move up levels, you are halving the amount of broken lists present, until there is one sorted list. This is where you get the log(n). The same is true for the splitting, just in reverse. Since you need to run a log(n) procedure 2n times, you get log(n)*n as the runtime. 
+
   Mean execution times for dataset of size n:
   Batch size: 10 times for 1-10000. Once for 1 million
   n=1       time: 0.0 ms
